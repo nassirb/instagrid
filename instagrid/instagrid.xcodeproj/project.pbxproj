@@ -56,15 +56,47 @@
 		EE60232226670A19009E6C8E /* instagrid */ = {
 			isa = PBXGroup;
 			children = (
-				EE60232326670A19009E6C8E /* AppDelegate.swift */,
-				EE60232526670A19009E6C8E /* SceneDelegate.swift */,
-				EE60232726670A19009E6C8E /* ViewController.swift */,
+				EE9B59C6266FA7AF0022C442 /* Supporting Files */,
+				EE9B59C3266FA75A0022C442 /* Model */,
+				EE9B59C4266FA76A0022C442 /* View */,
+				EE9B59C5266FA7730022C442 /* Controller */,
+			);
+			path = instagrid;
+			sourceTree = "<group>";
+		};
+		EE9B59C3266FA75A0022C442 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EE9B59C4266FA76A0022C442 /* View */ = {
+			isa = PBXGroup;
+			children = (
 				EE60232926670A19009E6C8E /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EE9B59C5266FA7730022C442 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				EE60232726670A19009E6C8E /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		EE9B59C6266FA7AF0022C442 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EE60232526670A19009E6C8E /* SceneDelegate.swift */,
+				EE60232326670A19009E6C8E /* AppDelegate.swift */,
 				EE60232C26670A1A009E6C8E /* Assets.xcassets */,
 				EE60232E26670A1A009E6C8E /* LaunchScreen.storyboard */,
 				EE60233126670A1A009E6C8E /* Info.plist */,
 			);
-			path = instagrid;
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
