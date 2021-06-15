@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EE5C191E2677995500BA5077 /* Delm-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = EE5C191D2677995500BA5077 /* Delm-Medium.otf */; };
+		EE5C19212677995C00BA5077 /* ThirstySoftRegular.otf in Resources */ = {isa = PBXBuildFile; fileRef = EE5C19202677995C00BA5077 /* ThirstySoftRegular.otf */; };
 		EE60232426670A19009E6C8E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE60232326670A19009E6C8E /* AppDelegate.swift */; };
 		EE60232626670A19009E6C8E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE60232526670A19009E6C8E /* SceneDelegate.swift */; };
 		EE60232826670A19009E6C8E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE60232726670A19009E6C8E /* ViewController.swift */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EE5C191D2677995500BA5077 /* Delm-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Delm-Medium.otf"; sourceTree = "<group>"; };
+		EE5C19202677995C00BA5077 /* ThirstySoftRegular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ThirstySoftRegular.otf; sourceTree = "<group>"; };
 		EE60232026670A19009E6C8E /* instagrid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = instagrid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE60232326670A19009E6C8E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EE60232526670A19009E6C8E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -93,6 +97,8 @@
 				EE60232526670A19009E6C8E /* SceneDelegate.swift */,
 				EE60232326670A19009E6C8E /* AppDelegate.swift */,
 				EE60232C26670A1A009E6C8E /* Assets.xcassets */,
+				EE5C19202677995C00BA5077 /* ThirstySoftRegular.otf */,
+				EE5C191D2677995500BA5077 /* Delm-Medium.otf */,
 				EE60232E26670A1A009E6C8E /* LaunchScreen.storyboard */,
 				EE60233126670A1A009E6C8E /* Info.plist */,
 			);
@@ -158,6 +164,8 @@
 			files = (
 				EE60233026670A1A009E6C8E /* LaunchScreen.storyboard in Resources */,
 				EE60232D26670A1A009E6C8E /* Assets.xcassets in Resources */,
+				EE5C19212677995C00BA5077 /* ThirstySoftRegular.otf in Resources */,
+				EE5C191E2677995500BA5077 /* Delm-Medium.otf in Resources */,
 				EE60232B26670A19009E6C8E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -319,7 +327,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = instagrid/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/instagrid/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -337,7 +345,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = instagrid/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/instagrid/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
