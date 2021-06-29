@@ -15,13 +15,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="InstagridLogo" translatesAutoresizingMaskIntoConstraints="NO" id="Fhn-cG-LeJ">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="InstagridLogo" translatesAutoresizingMaskIntoConstraints="NO" id="Fhn-cG-LeJ">
                                 <rect key="frame" x="70" y="150" width="180" height="180"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="180" id="Jpt-FH-Yjx"/>
+                                    <constraint firstAttribute="width" secondItem="Fhn-cG-LeJ" secondAttribute="height" multiplier="1:1" id="S84-1g-rEE"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.74236983059999995" green="0.83822065589999994" blue="0.88628298039999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="Fhn-cG-LeJ" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="TQa-Hn-msi"/>
+                            <constraint firstItem="Fhn-cG-LeJ" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="VZ0-gz-z9H"/>
+                            <constraint firstItem="Fhn-cG-LeJ" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="YKA-Ta-y1m"/>
+                            <constraint firstItem="Fhn-cG-LeJ" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="vpb-rB-jKW"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
