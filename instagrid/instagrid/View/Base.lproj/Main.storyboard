@@ -167,6 +167,24 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6oy-uJ-Ucy">
                                 <rect key="frame" x="10" y="177" width="180" height="60"/>
                                 <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="oNf-Qu-qvI">
+                                        <rect key="frame" x="19.333333333333329" y="10.333333333333343" width="141.33333333333337" height="39.333333333333336"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Arrow Left" translatesAutoresizingMaskIntoConstraints="NO" id="j5h-UE-Q1o">
+                                                <rect key="frame" x="63.666666666666671" y="0.0" width="14" height="10"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="10" id="VPT-1o-6Q5"/>
+                                                    <constraint firstAttribute="width" constant="14" id="lyR-NG-gLa"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe left to share" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v5w-6A-zlG">
+                                                <rect key="frame" x="0.0" y="19" width="141.33333333333334" height="20.333333333333329"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="hdO-t9-zI5">
                                         <rect key="frame" x="0.0" y="0.0" width="180" height="60"/>
                                         <subviews>
@@ -189,11 +207,13 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="hdO-t9-zI5" firstAttribute="top" secondItem="6oy-uJ-Ucy" secondAttribute="top" id="IiF-so-EHR"/>
+                                    <constraint firstItem="oNf-Qu-qvI" firstAttribute="centerY" secondItem="6oy-uJ-Ucy" secondAttribute="centerY" id="OUT-ih-TJZ"/>
                                     <constraint firstItem="hdO-t9-zI5" firstAttribute="leading" secondItem="6oy-uJ-Ucy" secondAttribute="leading" id="PqU-bu-KBt"/>
                                     <constraint firstAttribute="height" constant="60" id="RBQ-Ny-0VE"/>
                                     <constraint firstAttribute="bottom" secondItem="hdO-t9-zI5" secondAttribute="bottom" id="VoH-o0-0Jf"/>
                                     <constraint firstAttribute="width" constant="240" id="We0-89-0BV"/>
                                     <constraint firstAttribute="width" secondItem="6oy-uJ-Ucy" secondAttribute="height" multiplier="10:3" constant="50" id="eW9-io-x66"/>
+                                    <constraint firstItem="oNf-Qu-qvI" firstAttribute="centerX" secondItem="6oy-uJ-Ucy" secondAttribute="centerX" id="f0n-Th-RGA"/>
                                     <constraint firstAttribute="trailing" secondItem="hdO-t9-zI5" secondAttribute="trailing" id="gAs-6t-oFm"/>
                                     <constraint firstAttribute="width" constant="140" id="yi0-Ax-IGE">
                                         <variation key="heightClass=compact" constant="180"/>
@@ -285,6 +305,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Arrow Left" width="3.3333332538604736" height="4.6666665077209473"/>
         <image name="Arrow Up" width="4.6666665077209473" height="3.3333332538604736"/>
         <image name="Instagrid" width="41.333332061767578" height="13"/>
         <image name="Layout 1" width="26.666666030883789" height="26.666666030883789"/>
