@@ -13,7 +13,7 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="instagrid" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="GridView" customModule="instagrid" customModuleProvider="target">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -24,7 +24,7 @@
                                     <constraint firstAttribute="width" constant="100" id="yeh-ou-5wX"/>
                                 </constraints>
                             </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IJs-n9-caO">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IJs-n9-caO" customClass="GridView" customModule="instagrid" customModuleProvider="target">
                                 <rect key="frame" x="218" y="67" width="300" height="280"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eLa-L9-Atu">
@@ -108,6 +108,9 @@
                                     <constraint firstAttribute="width" constant="300" id="Ta5-3D-Up0"/>
                                     <constraint firstAttribute="height" constant="280" id="anf-t2-2ot"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="mainView" destination="qvd-Aw-GOi" id="Ji0-0h-ySm"/>
+                                </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WcT-Fr-S8U">
                                 <rect key="frame" x="631" y="67" width="65" height="65"/>
@@ -298,6 +301,10 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="gridView" destination="IJs-n9-caO" id="BFm-pU-dT5"/>
+                        <outlet property="layoutButton1" destination="WcT-Fr-S8U" id="ce6-ru-cT4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

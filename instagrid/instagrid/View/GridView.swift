@@ -7,6 +7,17 @@
 
 import UIKit
 
-class GridView: UIView {
 
+enum LayoutType {
+    case <#case#>
 }
+
+class GridView: UIView {
+    @IBOutlet var mainView : UIView!
+    @IBOutlet var firstSquare : UIView!
+    
+    func hideView(){
+        mainView.isHidden = true
+    }
+}
+
