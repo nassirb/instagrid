@@ -11,6 +11,11 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var gridView: GridView!
     @IBOutlet weak var layoutButton1: UIView!
+    @IBOutlet weak var layoutButton2: UIView!
+    @IBOutlet weak var layoutButton3: UIView!
+    
+//    uiTapGesture ici ensuite j'utilise la methode update lyout de la class gridView 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         gridView.hideView()

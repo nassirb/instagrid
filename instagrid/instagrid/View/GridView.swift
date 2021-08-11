@@ -9,15 +9,39 @@ import UIKit
 
 
 enum LayoutType {
-    case <#case#>
+    case layout1
+    case layout2
+    case layout3
 }
 
 class GridView: UIView {
-    @IBOutlet var mainView : UIView!
-    @IBOutlet var firstSquare : UIView!
+    @IBOutlet var topRightSquare : UIView!
+    @IBOutlet weak var topLeftSquare: UIView!
+    @IBOutlet weak var bottomRightSquare: UIView!
+    @IBOutlet weak var bottomLeftSquare: UIView!
+    @IBOutlet weak var topRectangle: UIView!
+    @IBOutlet weak var bottomRectangle: UIView!
     
     func hideView(){
-        mainView.isHidden = true
+        bottomLeftSquare.isHidden = true
+        bottomRightSquare.isHidden = true
+        topRectangle.isHidden = true
+    }
+    
+    func updateLayout(layout:LayoutType){
+        switch layout {
+            case .layout1:
+                topLeftSquare.isHidden = true
+                topRightSquare.isHidden = true
+                bottomRectangle.isHidden = true
+            case .layout2:
+                bottomLeftSquare.isHidden = true
+                bottomRightSquare.isHidden = true
+                topRectangle.isHidden = true
+            case .layout3:
+                topRectangle.isHidden = true
+                bottomRectangle.isHidden = true
+        }
     }
 }
 
