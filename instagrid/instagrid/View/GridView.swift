@@ -34,13 +34,23 @@ class GridView: UIView {
                 topLeftSquare.isHidden = true
                 topRightSquare.isHidden = true
                 bottomRectangle.isHidden = true
+                bottomLeftSquare.isHidden = false
+                bottomRightSquare.isHidden = false
+                topRectangle.isHidden = false
             case .layout2:
                 bottomLeftSquare.isHidden = true
                 bottomRightSquare.isHidden = true
                 topRectangle.isHidden = true
+                topLeftSquare.isHidden = false
+                topRightSquare.isHidden = false
+                bottomRectangle.isHidden = false
             case .layout3:
                 topRectangle.isHidden = true
                 bottomRectangle.isHidden = true
+                topLeftSquare.isHidden = false
+                topRightSquare.isHidden = false
+                bottomLeftSquare.isHidden = false
+                bottomRightSquare.isHidden = false
         }
     }
 }

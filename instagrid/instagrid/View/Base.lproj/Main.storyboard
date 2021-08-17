@@ -275,9 +275,9 @@
                                 <exclude reference="HiA-i9-CJT"/>
                                 <exclude reference="JqP-jW-Gty"/>
                                 <exclude reference="o8x-L0-EUf"/>
+                                <exclude reference="G1P-8X-T1o"/>
                                 <exclude reference="hQS-Rj-u1t"/>
                                 <exclude reference="zqz-CA-iny"/>
-                                <exclude reference="G1P-8X-T1o"/>
                                 <exclude reference="wCj-c3-0LA"/>
                                 <exclude reference="5Vw-1y-sbP"/>
                                 <exclude reference="i7E-XM-SlG"/>
@@ -291,12 +291,12 @@
                                 <include reference="o8x-L0-EUf"/>
                                 <exclude reference="oHI-gi-jPw"/>
                                 <exclude reference="v9M-Xj-twf"/>
+                                <exclude reference="6LZ-cv-dkt"/>
+                                <include reference="G1P-8X-T1o"/>
                                 <exclude reference="E72-nP-UJe"/>
                                 <include reference="hQS-Rj-u1t"/>
                                 <include reference="zqz-CA-iny"/>
                                 <exclude reference="Nfc-xp-BQj"/>
-                                <exclude reference="6LZ-cv-dkt"/>
-                                <include reference="G1P-8X-T1o"/>
                                 <include reference="wCj-c3-0LA"/>
                                 <include reference="5Vw-1y-sbP"/>
                                 <exclude reference="emr-FY-btg"/>
@@ -307,6 +307,9 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="checkMark1" destination="hH9-5h-EBR" id="EPH-jZ-NJc"/>
+                        <outlet property="checkMark2" destination="llV-7W-nWN" id="lel-Ub-g4w"/>
+                        <outlet property="checkMark3" destination="2Y5-va-xiw" id="gI3-4w-Dmo"/>
                         <outlet property="gridView" destination="IJs-n9-caO" id="BFm-pU-dT5"/>
                         <outlet property="layoutButton1" destination="WcT-Fr-S8U" id="ce6-ru-cT4"/>
                         <outlet property="layoutButton2" destination="OsS-iX-GCs" id="p6o-Id-cUY"/>
