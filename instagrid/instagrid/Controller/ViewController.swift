@@ -18,6 +18,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var checkMark2: UIView!
     @IBOutlet weak var checkMark3: UIView!
     
+    @IBOutlet weak var swipeUp: UIView!
+    @IBOutlet weak var swipeLeft: UIView!
+    
 //    uiTapGesture ici ensuite j'utilise la methode update lyout de la class gridView
     
     @objc private func didTapBtn1(){
@@ -42,6 +45,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         gridView.hideView()
+        swipeLeft.isHidden = true
         
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(didTapBtn1))
         layoutButton1.addGestureRecognizer(tapGestureRecognizer)
@@ -55,7 +59,15 @@ class ViewController: UIViewController {
     }
     
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
-        
+        if UIDevice.current.orientation.isLandscape{
+            print("landscape")
+            swipeLeft.isHidden = false
+            swipeUp.isHidden = true
+        } else {
+            print("portrait")
+            swipeLeft.isHidden = true
+            swipeUp.isHidden = false
+        }
     }
 
 

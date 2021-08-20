@@ -175,24 +175,6 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6oy-uJ-Ucy">
                                 <rect key="frame" x="87" y="166" width="240" height="57"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="oNf-Qu-qvI">
-                                        <rect key="frame" x="49.333333333333343" y="9" width="141.33333333333334" height="39.333333333333336"/>
-                                        <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Arrow Left" translatesAutoresizingMaskIntoConstraints="NO" id="j5h-UE-Q1o">
-                                                <rect key="frame" x="63.666666666666657" y="0.0" width="14" height="10"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="10" id="VPT-1o-6Q5"/>
-                                                    <constraint firstAttribute="width" constant="14" id="lyR-NG-gLa"/>
-                                                </constraints>
-                                            </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe left to share" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v5w-6A-zlG">
-                                                <rect key="frame" x="0.0" y="19" width="141.33333333333334" height="20.333333333333329"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                    </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="hdO-t9-zI5">
                                         <rect key="frame" x="0.0" y="0.0" width="240" height="57"/>
                                         <subviews>
@@ -205,6 +187,24 @@
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe up to share" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qns-zC-1aK">
                                                 <rect key="frame" x="52" y="19" width="136" height="38"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="oNf-Qu-qvI">
+                                        <rect key="frame" x="49.333333333333343" y="9" width="141.33333333333334" height="39.333333333333336"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Arrow Left" translatesAutoresizingMaskIntoConstraints="NO" id="j5h-UE-Q1o">
+                                                <rect key="frame" x="63.666666666666657" y="0.0" width="14" height="10"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="10" id="VPT-1o-6Q5"/>
+                                                    <constraint firstAttribute="width" constant="14" id="lyR-NG-gLa"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe left to share" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v5w-6A-zlG">
+                                                <rect key="frame" x="0.0" y="19" width="141.33333333333334" height="20.333333333333329"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -314,6 +314,8 @@
                         <outlet property="layoutButton1" destination="WcT-Fr-S8U" id="ce6-ru-cT4"/>
                         <outlet property="layoutButton2" destination="OsS-iX-GCs" id="p6o-Id-cUY"/>
                         <outlet property="layoutButton3" destination="sJB-UP-ZA5" id="UKP-sH-whA"/>
+                        <outlet property="swipeLeft" destination="oNf-Qu-qvI" id="0v6-fq-7Zf"/>
+                        <outlet property="swipeUp" destination="hdO-t9-zI5" id="8Vm-dY-wu9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
