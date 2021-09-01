@@ -110,11 +110,17 @@
                                 </constraints>
                                 <connections>
                                     <outlet property="bottomLeftSquare" destination="R1F-cq-gbr" id="nbr-R4-O3T"/>
+                                    <outlet property="bottomLeftSquarePlus" destination="pIg-jF-Ejv" id="TAg-7b-d4O"/>
                                     <outlet property="bottomRectangle" destination="W0e-cW-cwi" id="zn6-9G-5ih"/>
+                                    <outlet property="bottomRectanglePlus" destination="bFd-BM-gJl" id="h29-7F-ugJ"/>
                                     <outlet property="bottomRightSquare" destination="dqQ-FW-R6B" id="uF3-jm-pYl"/>
+                                    <outlet property="bottomRightSquarePlus" destination="VxD-9z-uj5" id="zOc-qb-ncY"/>
                                     <outlet property="topLeftSquare" destination="a8Z-hf-HQE" id="zjg-lu-irj"/>
+                                    <outlet property="topLeftSquarePlus" destination="cnS-dp-5RO" id="iC3-AH-ctR"/>
                                     <outlet property="topRectangle" destination="iVM-Qm-dPc" id="UTi-AC-haj"/>
+                                    <outlet property="topRectanglePlus" destination="dt7-tc-ZiF" id="Evz-K9-rYT"/>
                                     <outlet property="topRightSquare" destination="qvd-Aw-GOi" id="fwN-vn-Eil"/>
+                                    <outlet property="topRightSquarePlus" destination="p2c-ql-0PA" id="0By-Tt-GBb"/>
                                 </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WcT-Fr-S8U">

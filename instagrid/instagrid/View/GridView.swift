@@ -15,12 +15,19 @@ enum LayoutType {
 }
 
 class GridView: UIView {
-    @IBOutlet var topRightSquare : UIView!
+    @IBOutlet weak var topRightSquare : UIView!
     @IBOutlet weak var topLeftSquare: UIView!
     @IBOutlet weak var bottomRightSquare: UIView!
     @IBOutlet weak var bottomLeftSquare: UIView!
     @IBOutlet weak var topRectangle: UIView!
     @IBOutlet weak var bottomRectangle: UIView!
+    
+    @IBOutlet weak var topRightSquarePlus : UIView!
+    @IBOutlet weak var topLeftSquarePlus: UIView!
+    @IBOutlet weak var bottomRightSquarePlus: UIView!
+    @IBOutlet weak var bottomLeftSquarePlus: UIView!
+    @IBOutlet weak var topRectanglePlus: UIView!
+    @IBOutlet weak var bottomRectanglePlus: UIView!
     
     func hideView(){
         bottomLeftSquare.isHidden = true
