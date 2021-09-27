@@ -21,7 +21,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var swipeUp: UIView!
     @IBOutlet weak var swipeLeft: UIView!
     
-//    uiTapGesture ici ensuite j'utilise la methode update lyout de la class gridView
+    var selectedImageView: UIImageView!
     
     @objc private func didTapBtn1(){
         gridView.updateLayout(layout: .layout1)
@@ -69,7 +69,70 @@ class ViewController: UIViewController {
             swipeUp.isHidden = false
         }
     }
-
-
+    
+    @objc private func didTapPlusTopLeft(){
+        selectedImageView = gridView.topLeftSquareImage
+        didTapPlus()
+    }
+    @objc private func didTapPlusTopRight(){
+        selectedImageView = gridView.topRightSquareImage
+        didTapPlus()
+    }
+    @objc private func didTapPlusBottomLeft(){
+        selectedImageView = gridView.topLeftSquareImage
+        didTapPlus()
+    }
+    @objc private func didTapPlusBottomRight(){
+        selectedImageView = gridView.topLeftSquareImage
+        didTapPlus()
+    }
+    @objc private func didTapPlusTopRect(){
+        selectedImageView = gridView.topLeftSquareImage
+        didTapPlus()
+    }
+    @objc private func didTapPlusBottomRect(){
+        selectedImageView = gridView.topLeftSquareImage
+        didTapPlus()
+    }
+    
+    func setupGesture(){
+        let tapGestureRecognizerPlus = UITapGestureRecognizer(target: self, action: #selector(didTapPlusTopLeft))
+        gridView.topLeftSquare.addGestureRecognizer(tapGestureRecognizerPlus)
+        
+        let tapGestureRecognizerPlus2 = UITapGestureRecognizer(target: self, action: #selector(didTapPlusTopRight))
+        gridView.topRightSquare.addGestureRecognizer(tapGestureRecognizerPlus2)
+        
+        let tapGestureRecognizerPlus3 = UITapGestureRecognizer(target: self, action: #selector(didTapPlusBottomLeft))
+        gridView.bottomLeftSquare.addGestureRecognizer(tapGestureRecognizerPlus3)
+        
+        let tapGestureRecognizerPlus4 = UITapGestureRecognizer(target: self, action: #selector(didTapPlusBottomRight))
+        gridView.bottomRightSquare.addGestureRecognizer(tapGestureRecognizerPlus4)
+        
+        let tapGestureRecognizerPlus5 = UITapGestureRecognizer(target: self, action: #selector(didTapPlusTopRect))
+        gridView.topRectanglePlus.addGestureRecognizer(tapGestureRecognizerPlus5)
+        
+        let tapGestureRecognizerPlus6 = UITapGestureRecognizer(target: self, action: #selector(didTapPlusBottomRect))
+        gridView.bottomRectanglePlus.addGestureRecognizer(tapGestureRecognizerPlus6)
+    }
+    
+    func didTapPlus() {
+         let vc = UIImagePickerController()
+         vc.sourceType = .photoLibrary
+         vc.delegate = self
+         vc.allowsEditing = true
+         present(vc, animated: true)
+    }
+    
 }
 
+extension ViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let image = info[.editedImage] as? UIImage {
+            selectedImageView.image = image
+       }
+        picker.dismiss(animated: true, completion: nil)
+    }
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: true, completion: nil)
+    }
+}

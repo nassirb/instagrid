@@ -29,6 +29,14 @@ class GridView: UIView {
     @IBOutlet weak var topRectanglePlus: UIView!
     @IBOutlet weak var bottomRectanglePlus: UIView!
     
+    
+    @IBOutlet var topRightSquareImage : UIImageView!
+    @IBOutlet var topLeftSquareImage : UIImageView!
+    @IBOutlet var bottomRightSquareImage : UIImageView!
+    @IBOutlet var bottomLeftSquareImage : UIImageView!
+    @IBOutlet var topRectangleImage : UIImageView!
+    @IBOutlet var bottomRectangleImage : UIImageView!
+    
     func hideView(){
         bottomLeftSquare.isHidden = true
         bottomRightSquare.isHidden = true
@@ -60,24 +68,4 @@ class GridView: UIView {
                 bottomRightSquare.isHidden = false
         }
     }
-    
-//    func didTapPlus() {
-//        let vc = UIImagePickerController()
-//        vc.sourceType = .photoLibrary
-//        vc.delegate = self
-//        vc.allowsEditing = true
-//        present(vc, animated: true)
-//    }
 }
-
-//extension ViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-//    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-//        if let image = info[UIImagePickerController.InfoKey(rawValue: "UIImagePickerControllerEditedImage")] as? UIImage {
-//            imageView.image = image
-//        }
-//        picker.dismiss(animated: true, completion: nil)
-//    }
-//    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-//        picker.dismiss(animated: true, completion: nil)
-//    }
-//}
