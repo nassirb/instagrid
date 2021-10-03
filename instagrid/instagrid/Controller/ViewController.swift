@@ -46,6 +46,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         gridView.hideView()
         swipeLeft.isHidden = true
+        setupGesture()
         
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(didTapBtn1))
         layoutButton1.addGestureRecognizer(tapGestureRecognizer)
