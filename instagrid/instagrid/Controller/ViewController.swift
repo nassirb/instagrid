@@ -74,26 +74,32 @@ class ViewController: UIViewController {
     @objc private func didTapPlusTopLeft(){
         selectedImageView = gridView.topLeftSquareImage
         didTapPlus()
+        gridView.topLeftSquarePlus.isHidden = true
     }
     @objc private func didTapPlusTopRight(){
         selectedImageView = gridView.topRightSquareImage
         didTapPlus()
+        gridView.topRightSquarePlus.isHidden = true
     }
     @objc private func didTapPlusBottomLeft(){
-        selectedImageView = gridView.topLeftSquareImage
+        selectedImageView = gridView.bottomLeftSquareImage
         didTapPlus()
+        gridView.bottomLeftSquarePlus.isHidden = true
     }
     @objc private func didTapPlusBottomRight(){
-        selectedImageView = gridView.topLeftSquareImage
+        selectedImageView = gridView.bottomRightSquareImage
         didTapPlus()
+        gridView.bottomRightSquarePlus.isHidden = true
     }
     @objc private func didTapPlusTopRect(){
-        selectedImageView = gridView.topLeftSquareImage
+        selectedImageView = gridView.topRectangleImage
         didTapPlus()
+        gridView.topRectanglePlus.isHidden = true
     }
     @objc private func didTapPlusBottomRect(){
-        selectedImageView = gridView.topLeftSquareImage
+        selectedImageView = gridView.bottomRectangleImage
         didTapPlus()
+        gridView.bottomRectanglePlus.isHidden = true
     }
     
     func setupGesture(){
