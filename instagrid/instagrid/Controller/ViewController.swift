@@ -116,10 +116,10 @@ class ViewController: UIViewController {
         gridView.bottomRightSquare.addGestureRecognizer(tapGestureRecognizerPlus4)
         
         let tapGestureRecognizerPlus5 = UITapGestureRecognizer(target: self, action: #selector(didTapPlusTopRect))
-        gridView.topRectanglePlus.addGestureRecognizer(tapGestureRecognizerPlus5)
+        gridView.topRectangle.addGestureRecognizer(tapGestureRecognizerPlus5)
         
         let tapGestureRecognizerPlus6 = UITapGestureRecognizer(target: self, action: #selector(didTapPlusBottomRect))
-        gridView.bottomRectanglePlus.addGestureRecognizer(tapGestureRecognizerPlus6)
+        gridView.bottomRectangle.addGestureRecognizer(tapGestureRecognizerPlus6)
     }
     
     func didTapPlus() {
