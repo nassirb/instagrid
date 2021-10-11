@@ -48,6 +48,12 @@ class ViewController: UIViewController {
         swipeLeft.isHidden = true
         setupGesture()
         
+        swipeGesture()
+        navigationItem.title = "Collage sharing"
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Sahre", style: .plain, target: self, action: #selector(didSwipeUp))
+        
+        
+        
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(didTapBtn1))
         layoutButton1.addGestureRecognizer(tapGestureRecognizer)
         
@@ -58,6 +64,17 @@ class ViewController: UIViewController {
         layoutButton3.addGestureRecognizer(tapGestureRecognizer3)
         
     }
+    
+//    @objc  func didSwipeUp(){
+//        print("Test")
+//
+//        UIGraphicsBeginImageContext(view.frame.size)
+//        view.layer.render(in: UIGraphicsGetCurrentContext()!)
+//        let image = UIGraphicsGetImageFromCurrentImageContext()
+//        let ac = UIActivityViewController(activityItems: [image!], applicationActivities: nil)
+//        ac.popoverPresentationController?.barButtonItem = navigationItem.backBarButtonItem
+//        present(ac, animated: true, completion: nil)
+//    }
     
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
         if UIDevice.current.orientation.isLandscape{
@@ -130,6 +147,31 @@ class ViewController: UIViewController {
          present(vc, animated: true)
     }
     
+    @objc private func didSwipeUp(){
+        print("Test")
+
+        UIGraphicsBeginImageContext(gridView.frame.size)
+        gridView.layer.render(in: UIGraphicsGetCurrentContext()!)
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        let ac = UIActivityViewController(activityItems: [image!], applicationActivities: nil)
+        ac.popoverPresentationController?.barButtonItem = navigationItem.backBarButtonItem
+        present(ac, animated: true, completion: nil)
+    }
+//    @objc private func didSwipeLeft(){
+//        didSwipe()
+//    }
+    func swipeGesture(){
+        let swipeGestureRecognizerUp = UISwipeGestureRecognizer(target: self, action: #selector(didSwipeUp))
+        swipeGestureRecognizerUp.direction = .up
+        gridView.addGestureRecognizer(swipeGestureRecognizerUp)
+        
+//        let swipeGestureRecognizerLeft = UISwipeGestureRecognizer(target: self, action: #selector(didSwipeLeft))
+//        gridView.addGestureRecognizer(swipeGestureRecognizerLeft)
+    }
+//    func didSwipe() {
+//        let ac = UIActivityViewController(activityItems: [image!], applicationActivities: nil)
+//        present(ac, animated: true, completion: nil)
+//    }
 }
 
 extension ViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
