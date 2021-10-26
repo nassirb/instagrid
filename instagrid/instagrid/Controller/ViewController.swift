@@ -144,6 +144,11 @@ class ViewController: UIViewController {
         gridView.layer.render(in: UIGraphicsGetCurrentContext()!)
         let image = UIGraphicsGetImageFromCurrentImageContext()
         let ac = UIActivityViewController(activityItems: [image!], applicationActivities: nil)
+        ac.completionWithItemsHandler = { activity, success , item , error in
+                UIView.animate(withDuration: 2.0) {
+                    self.gridView.transform = .identity
+            }
+        }
         present(ac, animated: true, completion: {
                 UIView.animate(withDuration: 2.0) {
                 self.gridView.transform = CGAffineTransform(translationX: self.gridView.bounds.origin.x, y: -2000)
@@ -161,6 +166,11 @@ class ViewController: UIViewController {
         gridView.layer.render(in: UIGraphicsGetCurrentContext()!)
         let imageL = UIGraphicsGetImageFromCurrentImageContext()
         let acL = UIActivityViewController(activityItems: [imageL!], applicationActivities: nil)
+        acL.completionWithItemsHandler = { activity, success , item , error in
+                UIView.animate(withDuration: 2.0) {
+                    self.gridView.transform = .identity
+            }
+        }
         present(acL, animated: true, completion: {
                 UIView.animate(withDuration: 2.0) {
                 self.gridView.transform = CGAffineTransform(translationX: -2000, y:  self.gridView.bounds.origin.y)
