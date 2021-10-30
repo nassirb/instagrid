@@ -132,7 +132,6 @@ class ViewController: UIViewController {
          present(vc, animated: true)
     }
     
-    
     @objc private func didSwipeUp(){
         print("SwipeUp")
         
@@ -151,10 +150,12 @@ class ViewController: UIViewController {
         }
         present(ac, animated: true, completion: {
                 UIView.animate(withDuration: 2.0) {
-                self.gridView.transform = CGAffineTransform(translationX: self.gridView.bounds.origin.x, y: -2000)
+                    self.gridView.transform = CGAffineTransform(translationX: self.gridView.bounds.origin.x, y: -2000)
+                    self.refreshGridView()
             }
         })
     }
+    
     @objc private func didSwipeLeft(){
         print("SwipeLeft")
         
@@ -173,7 +174,8 @@ class ViewController: UIViewController {
         }
         present(acL, animated: true, completion: {
                 UIView.animate(withDuration: 2.0) {
-                self.gridView.transform = CGAffineTransform(translationX: -2000, y:  self.gridView.bounds.origin.y)
+                    self.gridView.transform = CGAffineTransform(translationX: -2000, y:  self.gridView.bounds.origin.y)
+                    self.refreshGridView()
             }
         })
     }
@@ -187,6 +189,25 @@ class ViewController: UIViewController {
         swipeGestureRecognizerLeft.direction = .left
         gridView.addGestureRecognizer(swipeGestureRecognizerLeft)
     }
+    
+    func refreshGridView(){
+        gridView.topRightSquareImage.removeFromSuperview()
+        gridView.topLeftSquareImage.removeFromSuperview()
+        gridView.bottomRightSquareImage.removeFromSuperview()
+        gridView.bottomLeftSquareImage.removeFromSuperview()
+        gridView.topRectangleImage.removeFromSuperview()
+        gridView.bottomRectangleImage.removeFromSuperview()
+        reloadPlus()
+    }
+    
+    func reloadPlus(){
+        gridView.topLeftSquarePlus.isHidden = false
+        gridView.topRightSquarePlus.isHidden = false
+        gridView.bottomLeftSquarePlus.isHidden = false
+        gridView.bottomRightSquarePlus.isHidden = false
+        gridView.topRectanglePlus.isHidden = false
+        gridView.bottomRectanglePlus.isHidden = false
+    }
 }
 
 extension ViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
@@ -198,5 +219,6 @@ extension ViewController: UIImagePickerControllerDelegate, UINavigationControlle
     }
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         picker.dismiss(animated: true, completion: nil)
+        reloadPlus()
     }
 }
