@@ -37,6 +37,9 @@ class GridView: UIView {
     @IBOutlet var topRectangleImage : UIImageView!
     @IBOutlet var bottomRectangleImage : UIImageView!
     
+    var selectedImageView: UIImageView!
+    var selectedButton: UIView!
+    
     func hideView(){
         bottomLeftSquare.isHidden = true
         bottomRightSquare.isHidden = true
@@ -67,5 +70,27 @@ class GridView: UIView {
                 bottomLeftSquare.isHidden = false
                 bottomRightSquare.isHidden = false
         }
+    }
+    func refreshGridView(){
+        topRightSquareImage.removeFromSuperview()
+        topLeftSquareImage.removeFromSuperview()
+        bottomRightSquareImage.removeFromSuperview()
+        bottomLeftSquareImage.removeFromSuperview()
+        topRectangleImage.removeFromSuperview()
+        bottomRectangleImage.removeFromSuperview()
+        reloadAllPlus()
+    }
+    
+    func reloadPlus(){
+        selectedButton.isHidden = false
+    }
+    
+    func reloadAllPlus(){
+        topLeftSquarePlus.isHidden = false
+        topRightSquarePlus.isHidden = false
+        bottomLeftSquarePlus.isHidden = false
+        bottomRightSquarePlus.isHidden = false
+        topRectanglePlus.isHidden = false
+        bottomRectanglePlus.isHidden = false
     }
 }

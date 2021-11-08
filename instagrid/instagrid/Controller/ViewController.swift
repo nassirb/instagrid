@@ -77,31 +77,37 @@ class ViewController: UIViewController {
         selectedImageView = gridView.topLeftSquareImage
         didTapPlus()
         gridView.topLeftSquarePlus.isHidden = true
+        gridView.selectedButton = gridView.topLeftSquarePlus
     }
     @objc private func didTapPlusTopRight(){
         selectedImageView = gridView.topRightSquareImage
         didTapPlus()
         gridView.topRightSquarePlus.isHidden = true
+        gridView.selectedButton = gridView.topRightSquarePlus
     }
     @objc private func didTapPlusBottomLeft(){
         selectedImageView = gridView.bottomLeftSquareImage
         didTapPlus()
         gridView.bottomLeftSquarePlus.isHidden = true
+        gridView.selectedButton = gridView.bottomLeftSquarePlus
     }
     @objc private func didTapPlusBottomRight(){
         selectedImageView = gridView.bottomRightSquareImage
         didTapPlus()
         gridView.bottomRightSquarePlus.isHidden = true
+        gridView.selectedButton = gridView.bottomRightSquarePlus
     }
     @objc private func didTapPlusTopRect(){
         selectedImageView = gridView.topRectangleImage
         didTapPlus()
         gridView.topRectanglePlus.isHidden = true
+        gridView.selectedButton = gridView.topRectanglePlus
     }
     @objc private func didTapPlusBottomRect(){
         selectedImageView = gridView.bottomRectangleImage
         didTapPlus()
         gridView.bottomRectanglePlus.isHidden = true
+        gridView.selectedButton = gridView.bottomRectanglePlus
     }
     
     func setupGesture(){
@@ -151,7 +157,7 @@ class ViewController: UIViewController {
         present(ac, animated: true, completion: {
                 UIView.animate(withDuration: 2.0) {
                     self.gridView.transform = CGAffineTransform(translationX: self.gridView.bounds.origin.x, y: -2000)
-                    self.refreshGridView()
+                    self.gridView.refreshGridView()
             }
         })
     }
@@ -175,7 +181,7 @@ class ViewController: UIViewController {
         present(acL, animated: true, completion: {
                 UIView.animate(withDuration: 2.0) {
                     self.gridView.transform = CGAffineTransform(translationX: -2000, y:  self.gridView.bounds.origin.y)
-                    self.refreshGridView()
+                    self.gridView.refreshGridView()
             }
         })
     }
@@ -190,24 +196,7 @@ class ViewController: UIViewController {
         gridView.addGestureRecognizer(swipeGestureRecognizerLeft)
     }
     
-    func refreshGridView(){
-        gridView.topRightSquareImage.removeFromSuperview()
-        gridView.topLeftSquareImage.removeFromSuperview()
-        gridView.bottomRightSquareImage.removeFromSuperview()
-        gridView.bottomLeftSquareImage.removeFromSuperview()
-        gridView.topRectangleImage.removeFromSuperview()
-        gridView.bottomRectangleImage.removeFromSuperview()
-        reloadPlus()
-    }
     
-    func reloadPlus(){
-        gridView.topLeftSquarePlus.isHidden = false
-        gridView.topRightSquarePlus.isHidden = false
-        gridView.bottomLeftSquarePlus.isHidden = false
-        gridView.bottomRightSquarePlus.isHidden = false
-        gridView.topRectanglePlus.isHidden = false
-        gridView.bottomRectanglePlus.isHidden = false
-    }
 }
 
 extension ViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
@@ -219,6 +208,6 @@ extension ViewController: UIImagePickerControllerDelegate, UINavigationControlle
     }
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         picker.dismiss(animated: true, completion: nil)
-        reloadPlus()
+        gridView.reloadPlus()
     }
 }

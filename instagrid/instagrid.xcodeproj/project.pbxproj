@@ -63,18 +63,10 @@
 			isa = PBXGroup;
 			children = (
 				EE9B59C6266FA7AF0022C442 /* Supporting Files */,
-				EE9B59C3266FA75A0022C442 /* Model */,
 				EE9B59C4266FA76A0022C442 /* View */,
 				EE9B59C5266FA7730022C442 /* Controller */,
 			);
 			path = instagrid;
-			sourceTree = "<group>";
-		};
-		EE9B59C3266FA75A0022C442 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		EE9B59C4266FA76A0022C442 /* View */ = {
